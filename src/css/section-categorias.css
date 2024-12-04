@@ -46,7 +46,11 @@
   display: flex;
   justify-content: center;
   gap: 2rem;
-  animation: boxShadowAnimation 3s ease-in-out infinite alternate;
+  animation: boxShadowAnimation 3s ease-in-out infinite alternate, slideIn 1s ease-in-out;
+}
+
+#container-categoria-mobile-2 {
+  animation: boxShadowAnimation 3s ease-in-out infinite alternate, slideIn 1.5s ease-in-out;
 }
 
 .container-lateral-produtos-mobile img {
@@ -135,6 +139,16 @@
 
   .container-lateral-produtos {
     display: none;
+  }
+}
+
+
+@keyframes slideIn {
+  from {
+      transform: translateX(100vw); /* Fora da tela */
+  }
+  to {
+      transform: translateX(0); /* Dentro da tela */
   }
 }
 
